@@ -2,35 +2,36 @@ package com.school_hillel.task1;
 
 public class RandomArray {
     private int value = 5 + (int) (Math.random() * 10);
-    private int array[] = new int[value];
+    private int[] arrayEven = new int[value];
+    private int[] arrayOdd = new int[value];
     private int rand;
 
     public void printEvenArray() {
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < arrayEven.length; i++) {
             rand = (int) (Math.random() * 100);
             if (rand % 2 == 0) {
-                array[i] = rand;
-                System.out.println(array[i]);
+                arrayEven[i] = rand;
+                System.out.println(arrayEven[i]);
             } else {
                 i--;
             }
         }
-        findMax(array);
-        findMin(array);
+        findMax(arrayEven);
+        findMin(arrayEven);
     }
 
     public void printOddArray() {
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < arrayOdd.length; i++) {
             rand = (int) (Math.random() * 100);
             if (rand % 2 > 0) {
-                array[i] = rand;
-                System.out.println(array[i]);
+                arrayOdd[i] = rand;
+                System.out.println(arrayOdd[i]);
             } else {
                 i--;
             }
         }
-        findMax(array);
-        findMin(array);
+        findMax(arrayOdd);
+        findMin(arrayOdd);
     }
 
     private void findMax(int[] array) {
