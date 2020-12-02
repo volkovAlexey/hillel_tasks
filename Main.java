@@ -6,12 +6,13 @@ public class Main {
         Elevator cargoElevator = new CargoElevator(3, 500, 16);
         Elevator forInvalids = new ElevatorForInvalids(5, 100, 16);
 
-        Elevator [] elevators = {passElevator, cargoElevator, forInvalids};
+        Elevator[] elevators = {passElevator, cargoElevator, forInvalids};
 
-        elevators[0].moveToFloor(-3, 150);
-        elevators[1].moveToFloor(9999, 150);
-        elevators[2].moveToFloor(8, 150);
-        elevators[1].moveToFloor(1, 150);
-
+        for (Elevator temp : elevators) {
+            temp.moveToFloor(-3, 120);
+            temp.moveToFloor(9999, 150);
+            temp.moveToFloor(8, 150);
+            temp.moveToFloor(1, 100);
+        }
     }
 }
